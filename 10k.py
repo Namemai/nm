@@ -647,13 +647,13 @@ def helpbot():
 				  "│ ≫ " + key + "Gruplist\n" + \
 				  "│ ≫ " + key + "Info 「@」\n" + \
                                   "│ ≫ " + key + "Nk「@」\n" + \
-                                  "│ ≫ " + key + "Fuck「@」\n" + \
-				  "│ ≫ " + key + "S u p e r\n" + \
+                                  "│ ≫ " + key + "Mk「@」\n" + \
+				  "│ ≫ " + key + "Super\n" + \
 				  "│ ≫ " + key + "Me\n" + \
                   "│ ≫ " + key + "Mid「@」\n" + \
 				  "│ ≫ " + key + "Mybot\n" + \
                   "│ ≫ " + key + "Mid\n" + \
-				  "│ ≫ " + key + "Open\n" + \
+				  "│ ≫ " + key + "เปิดลิ้ง\n" + \
 				  "│ ≫ " + key + "Respon\n" + \
 				  "│ ≫ " + key + "Restart\n" + \
 				  "│ ≫ " + key + "Runtime\n" + \
