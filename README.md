@@ -1,2 +1,0 @@
-# SELFBOT-BY:MAX
-
