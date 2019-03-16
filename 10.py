@@ -1,6 +1,5 @@
-# -*- coding: utf-8 -*- 
-import LINEPY
-from LINEPY import *
+import KIA
+from KIA import *
 from akad.ttypes import *
 from multiprocessing import Pool, Process
 from time import sleep
@@ -10,6 +9,7 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 from googletrans import Translator
 import youtube_dl
+#=============
 
 aditmadzs = LineClient()
 #aditmadzs = LineClient(authToken='TOKEN')
