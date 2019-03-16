@@ -1,77 +1,132 @@
-
+# -*- coding: utf-8 -*- 
+import LINEPY
+from LINEPY import *
+from akad.ttypes import *
+from multiprocessing import Pool, Process
+from time import sleep
+import pytz, datetime, pafy, time, timeit, random, sys, ast, re, os, json, subprocess, threading, string, codecs, requests, tweepy, ctypes, urllib, wikipedia
+from datetime import timedelta, date
+from datetime import datetime
+from bs4 import BeautifulSoup
+from googletrans import Translator
+import youtube_dl
 
 aditmadzs = LineClient()
 #aditmadzs = LineClient(authToken='TOKEN')
 aditmadzs.log("Auth Token : " + str(aditmadzs.authToken))
 channel = LineChannel(aditmadzs)
 aditmadzs.log("Channel Access Token : " + str(channel.channelAccessToken))
+lineProfile = aditmadzs.getProfile()
+lineSettings = aditmadzs.getSettings()
+mid = aditmadzs.getProfile().mid
+responsename = aditmadzs.getProfile().displayName
 
 ki = LineClient()
 #ki = LineClient(authToken='TOKEN LU')
 ki.log("Auth Token : " + str(ki.authToken))
 channel1 = LineChannel(ki)
 ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
+lineProfile = ki.getProfile()
+lineSettings = ki.getSettings()
+Amid = ki.getProfile().mid
+responsename1 = ki.getProfile().displayName
 
 kk = LineClient()
 #kk = LineClient(authToken='TOKEN LU')
 kk.log("Auth Token : " + str(kk.authToken))
 channel2 = LineChannel(kk)
 kk.log("Channel Access Token : " + str(channel2.channelAccessToken))
+lineProfile = kk.getProfile()
+lineSettings = kk.getSettings()
+Bmid = kk.getProfile().mid
+responsename2 = kk.getProfile().displayName
 
 kc = LineClient()
 #kc = LineClient(authToken='TOKEN LU')
 kc.log("Auth Token : " + str(kc.authToken))
 channel3 = LineChannel(kc)
 kc.log("Channel Access Token : " + str(channel3.channelAccessToken))
+lineProfile = kc.getProfile()
+lineSettings = kc.getSettings()
+Cmid = kc.getProfile().mid
+responsename3 = kc.getProfile().displayName
 
 kb = LineClient()
 #kb = LineClient(authToken='TOKEN LU')
 kb.log("Auth Token : " + str(kb.authToken))
 channel4 = LineChannel(kb)
 kb.log("Channel Access Token : " + str(channel4.channelAccessToken))
+lineProfile = kb.getProfile()
+lineSettings = kb.getSettings()
+Dmid = kb.getProfile().mid
+responsename4 = kb.getProfile().displayName
 
 kd = LineClient()
 #kd = LineClient(authToken='TOKEN LU')
 kd.log("Auth Token : " + str(kd.authToken))
 channel5 = LineChannel(kd)
 kd.log("Channel Access Token : " + str(channel5.channelAccessToken))
+lineProfile = kd.getProfile()
+lineSettings = kd.getSettings()
+Emid = kd.getProfile().mid
+responsename5 = kd.getProfile().displayName
 
 ke = LineClient()
 #ke = LineClient(authToken='TOKEN LU')
 ke.log("Auth Token : " + str(ke.authToken))
 channel6 = LineChannel(ke)
 ke.log("Channel Access Token : " + str(channel6.channelAccessToken))
+lineProfile = ke.getProfile()
+lineSettings = ke.getSettings()
+Fmid = ke.getProfile().mid
+responsename6 = ke.getProfile().displayName
 
 kf = LineClient()
 #kf = LineClient(authToken='TOKEN LU')
 kf.log("Auth Token : " + str(kf.authToken))
 channel7 = LineChannel(kf)
 kf.log("Channel Access Token : " + str(channel7.channelAccessToken))
+lineProfile = kf.getProfile()
+lineSettings = kf.getSettings()
+Gmid = kf.getProfile().mid
+responsename7 = kf.getProfile().displayName
 
 kg = LineClient()
 #kg = LineClient(authToken='TOKEN LU')
 kg.log("Auth Token : " + str(kg.authToken))
 channel8 = LineChannel(kg)
 kg.log("Channel Access Token : " + str(channel8.channelAccessToken))
+lineProfile = kg.getProfile()
+lineSettings = kg.getSettings()
+Hmid = kg.getProfile().mid
+responsename8 = kg.getProfile().displayName
 
 kh = LineClient()
 #kh = LineClient(authToken='TOKEN LU')
 kh.log("Auth Token : " + str(kh.authToken))
 channel9 = LineChannel(kh)
 kh.log("Channel Access Token : " + str(channel9.channelAccessToken))
+lineProfile = kh.getProfile()
+lineSettings = kh.getSettings()
+Imid = kh.getProfile().mid
+responsename9 = kh.getProfile().displayName
 
 sw = LineClient()
 #sw = LineClient(authToken='TOKEN LU')
 sw.log("Auth Token : " + str(sw.authToken))
-channel1 = LineChannel(sw)
-sw.log("Channel Access Token : " + str(channel1.channelAccessToken))
+channel0 = LineChannel(sw)
+sw.log("Channel Access Token : " + str(channel0.channelAccessToken))
+lineProfile = sw.getProfile()
+lineSettings = sw.getSettings()
+Zmid = sw.getProfile().mid
+responsename10 = sw.getProfile().displayName
 
 poll = LinePoll(aditmadzs)
 call = aditmadzs
-creator = ["u05a8619c623960b67de73061c74e212e"]
-owner = ["u05a8619c623960b67de73061c74e212e"]
-admin = ["u05a8619c623960b67de73061c74e212e"]
-staff = ["u05a8619c623960b67de73061c74e212e"]
+creator = ["uc66e45201d1612eb4ce7b3a86bac4685"]
+owner = ["uc66e45201d1612eb4ce7b3a86bac4685"]
+admin = ["uc66e45201d1612eb4ce7b3a86bac4685"]
+staff = ["uc66e45201d1612eb4ce7b3a86bac4685"]
 mid = aditmadzs.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
@@ -109,6 +164,7 @@ myProfile["displayName"] = AditmadzsProfile.displayName
 myProfile["statusMessage"] = AditmadzsProfile.statusMessage
 myProfile["pictureStatus"] = AditmadzsProfile.pictureStatus
 
+responsename = aditmadzs.getProfile().displayName
 responsename1 = ki.getProfile().displayName
 responsename2 = kk.getProfile().displayName
 responsename3 = kc.getProfile().displayName
@@ -3036,7 +3092,7 @@ def bot(op):
                                 wait["unsend"] = False
                                 aditmadzs.sendMessage(msg.to, "Deteksi Unsend Dinonaktifkan")                                
 
-                        elif cmd == "status":
+                        elif cmd == "st":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 tz = pytz.timezone("Asia/Jakarta")
@@ -3157,7 +3213,7 @@ def bot(op):
                                msg.contentMetadata = {'mid': Zmid}
                                aditmadzs.sendMessage1(msg)
 
-                        elif text.lower() == "remove chat":
+                        elif text.lower() == "ลบแชท":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                try:
@@ -3179,6 +3235,8 @@ def bot(op):
                                    kg.sendMessage(msg.to, "ลบแชท เรียบร้อย ✔")
                                    kh.removeAllMessages(op.param2)
                                    kh.sendMessage(msg.to, "ลบแชท เรียบร้อย ✔")
+                                   sw.removeAllMessages(op.param2)
+                                   sw.sendMessage(msg.to, "ลบแชท เรียบร้อย ✔")
                                    aditmadzs.sendMessage(msg.to,"ลบแชทคิกเรียบร้อย ✔")
                                except:
                                    pass
@@ -3286,7 +3344,7 @@ def bot(op):
                                Setmain["keyCommand"] = ""
                                aditmadzs.sendMessage(msg.to, "「Setkey」\nSetkey mu kembali ke awal")
 
-                        elif cmd == "restart":
+                        elif cmd == "รีบอท":
                           if wait["selfbot"] == True:
                             if msg._from in creator:
                                aditmadzs.sendMessage(msg.to, "Restart Sukses Bos!...")
@@ -3761,7 +3819,7 @@ def bot(op):
                                     me += str(e) + ". " +aditmadzs.getGroup(group).name + "\n"                                    
                                 aditmadzs.sendMessage(msg.to,"┏━━[ MAX Protect ]\n\n»» PROTECT URL :\n"+ma+"\n»» PROTECT KICK :\n"+mb+"\n»» PROTECT JOIN :\n"+md+"\n»» PROTECT CANCEL:\n"+mc+"\n»» PROTECT INVITE :\n"+me+"\nTotal「%s」Protect yang aktif" %(str(len(protectqr)+len(protectkick)+len(protectjoin)+len(protectcancel)+len(protectinvite))))
 
-                        elif cmd == "respon":
+                        elif cmd == "b":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 ki.sendMessage(msg.to,responsename1)
@@ -3775,11 +3833,11 @@ def bot(op):
                                 kh.sendMessage(msg.to,responsename9)
                                 sw.sendMessage(msg.to,responsename10)
                         
-                        elif cmd == "invitebot":
+                        elif cmd == "ดึงบอท":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 try:
-                                    anggota = [Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid]
+                                    anggota = [Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Zmid]
                                     aditmadzs.inviteIntoGroup(msg.to, anggota)
                                     ki.acceptGroupInvitation(msg.to)
                                     kk.acceptGroupInvitation(msg.to)
@@ -3790,6 +3848,7 @@ def bot(op):
                                     kf.acceptGroupInvitation(msg.to)
                                     kg.acceptGroupInvitation(msg.to)
                                     kh.acceptGroupInvitation(msg.to)
+                                    sw.acceptGroupInvitation(msg.to)
                                 except:
                                     pass
                                 
@@ -3803,7 +3862,7 @@ def bot(op):
                                 except:
                                     pass
 
-                        elif cmd == "reinvite":
+                        elif cmd == "คิก":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = aditmadzs.getGroup(msg.to)
@@ -3844,6 +3903,10 @@ def bot(op):
                                 kh.updateGroup(G)
                                 G.preventedJoinByTicket = True
                                 kh.updateGroup(G)
+                                G.preventedJoinByTicket = False
+                                sw.updateGroup(G)
+                                G.preventedJoinByTicket = True
+                                sw.updateGroup(G)
                                 
                         elif cmd == "มา":
                           if wait["selfbot"] == True:
@@ -3863,6 +3926,7 @@ def bot(op):
                                 kf.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 kg.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 kh.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                sw.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 G = kc.getGroup(msg.to)
                                 G.preventedJoinByTicket = True
                                 kc.updateGroup(G)
@@ -3881,6 +3945,7 @@ def bot(op):
                                 kf.leaveGroup(msg.to)
                                 kg.leaveGroup(msg.to)
                                 kh.leaveGroup(msg.to)
+                                sw.leaveGroup(msg.to)
 
                         elif cmd == "bot1":
                             if msg._from in admin:
@@ -4127,6 +4192,10 @@ def bot(op):
                                 get_profile = kh.getProfile()
                                 get_profile_time = time.time() - get_profile_time_start
                                 kh.sendMessage(msg.to, "➲ BOT 9 Speed\n%.10f detik" % (get_profile_time/3))
+                                get_profile_time_start = time.time()
+                                get_profile = sw.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                sw.sendMessage(msg.to, "➲ BOT 9 Speed\n%.10f detik" % (get_profile_time/3))
 
                         elif cmd == "speed" or cmd == "sp":
                           if wait["selfbot"] == True:
@@ -4136,7 +4205,7 @@ def bot(op):
                                elapsed_time = time.time() - start
                                aditmadzs.sendMessage(msg.to, "{} detik".format(str(elapsed_time)))
  
-                        elif cmd == "speedbot" or cmd == "spbot":
+                        elif cmd == "spk" or cmd == "spbot":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                start = time.time()
@@ -4159,6 +4228,8 @@ def bot(op):
                                kg.sendMessage(msg.to, "{} detik".format(str(elapsed_time)))
                                elapsed_time = time.time() - start
                                kh.sendMessage(msg.to, "{} detik".format(str(elapsed_time)))
+                               elapsed_time = time.time() - start
+                               sw.sendMessage(msg.to, "{} detik".format(str(elapsed_time)))
                                
                         elif cmd == "cctv on":
                           if wait["selfbot"] == True:
